@@ -12,7 +12,7 @@ print(30*27)
 
 #3. Faça um programa que imprima a média aritmética entre os números 5, 8, 12.
 
-print((5+8+)/3)
+print((5 + 8 + 12) / 3)
 
 #4. Faça um programa que leia e imprima um número inteiro.
 
@@ -53,7 +53,7 @@ print("Telefone:", telefone)
 numero1 = int(input("Digite primeiro número inteiro: "))
 numero2 = int(input("Digitar segundo número inteiro: "))
 subtracao = numero1 - numero2
-print("A subtração é:", subtracao
+print("A subtração é:", subtracao )
 
 #9. Faça um programa que leia um número real e imprima ¼ deste número.
 
@@ -89,7 +89,7 @@ multiplicao = numero1 * numero2
 divisao = numero1 / numero2
 print("Adição:", adicao)
 print("Subtração:", subtracao)
-print("Multiplicação:", multiplicacao)
+print("Multiplicação:", multiplicao)
 print("Divisão:", divisao)
 
 
@@ -207,11 +207,11 @@ print("Litros de combustível consumidos:", litros_consumidos, "L")
 #    valor da prestação acrescido dos juros. Considere juros simples.
 
 
-valor_prestacao = float(input("Digite o valor da prestação vencida: ")
+valor_prestacao = float(input("Digite o valor da prestação vencida: "))
 taxa_juros = float(input("Digite a taxa de juros (ex:0.02 para 2% ao mês): "))
 periodo_atraso = float(input("Digite o período de atraso (em meses, dias): "))
 juros_cobrados = valor_prestacao * taxa_juros * periodo_atraso
-valor_final = valor-prestacao + juros_cobrados
+valor_final = valor_prestacao + juros_cobrados
 print(f"\njuros a serem cobrados pelo período de atraso: R${juros_cobrados}")
 print(f"valor da prestação acrescido dos juros: R${valor_final}")
 
