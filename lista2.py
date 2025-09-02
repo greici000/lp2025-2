@@ -80,6 +80,13 @@ def exercicio5()
 
 #7. Faça um programa que leia um número e indique se o número está compreendido
 #   entre 20 e 50 ou não.
+def exercicio7()
+    numero = int(input(" Digite um número: "))
+    if numero > 20 and numero < 50: 
+        print ( " O número está entre 20 e 50.")
+    else:
+        print ( " O número Não está entre 20 e 50.")
+
 
 #8. Faça um programa que leia um número e imprima uma das mensagens:
 #   "Maior do que 20", "Igual a 20"ou "Menor do que 20".
@@ -97,11 +104,19 @@ def exercicio5()
 #• Se é maior de idade
 #• Se é menor de idade
 #• Se é maior de 65 anos
+def exercicio12()
+    idade = int(input(" Digite a idade: "))
+    if idade >= 18 : 
+        print(" Maior de idade")
+    if idade < 18 : 
+        print( " Menor de idade")
+    if idade > 65 : 
+        print( " Maior de 65 anos")
 
 #13. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota
 #da prova 2 de um aluno. O programa deve imprimir o nome, a nota da prova 1,
 #a nota da prova 2, a média das notas e uma das mensagens: "Aprovado",
-#"Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para
+#Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para
 #reprovação e as demais em prova final).
 
 #14. Faça um programa que permita entrar com o salário de uma pessoa e imprima o
