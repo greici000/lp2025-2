@@ -29,19 +29,50 @@ def exemploSe_SenaoSe_Senao():
 
 #1. Faça um programa que leia dois valores numéricos inteiros e efetue
 #   a adição, caso o resultado seja maior que 10, apresentá-lo.
+def exercício1()
+    valor1 = int(input("Digitar o Primeiro valor: ")
+    valor2 = int(input(" Digitar o segundo valor: ")
+    soma = valor1 + valor2
+    if soma > 10:
+        print(f" A soma é :{soma} ")
+
 
 #2. Faça um programa que leia dois valores inteiros e efetue a adição.
 #   Caso o valor somado seja maior que 20, este deverá ser apresentado
 #   somando-se a ele mais 8, caso o valor somado seja menor ou igual a
 #   20, este deverá ser apresentado subtraindo-se 5.
+def exercício2()
+    valor1 = int(input(" Digite o primeiro valor: "))
+    valor2 = int(input(" Digite o segundo valor: "))
+    soma = valor + valor2 
+    if soma > 20 : 
+        resultado = soma + 8 
+    else: 
+        resultado = soma -5 
+    print(f " O resultado final é : {resultado}")
 
 #3. Faça um programa que leia um número e imprima uma das duas mensagens:
 #   "É múltiplo de 3"ou "Não é múltiplo de 3".
+def exercicio3():
+    numero= int(input("Digite um número: "))
+
+    if numero % 3 == 0: 
+        print("É múltiplo de 3")
+    else: 
+        print("não é múltiplo de 3")
 
 #4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
 
 #5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
+def exercicio5()
+    numero = int(input("Digite um número: ")
 
+    if numero % 3 == 0 and numero % 7 == 0
+        print(" É divisível por 3 e por 7 ")
+                 else: 
+                 print( " não é divisível por 3 é por 7 ")
+
+                 
 #6. A prefeitura do Rio de Janeiro abriu uma linha de crédito para os funcionários
 #   estatutários. O valor máximo da prestação não poderá ultrapassar 30% do salário
 #   bruto. Faça um programa que permita entrar com o salário bruto
