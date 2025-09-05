@@ -134,9 +134,27 @@ else:
     imprimir(f'Idade:{int((HOJE - data_nascimento).dias/365)}anos.')
 #10. Faça um programa que leia três números inteiros e imprima os três em ordem
 #crescente.
+def execicio10()
+num1 = int(input('Digite o primeiro número: '))
+num2 = int(input('Digite o segundo número: '))
+num3 = int(input('Digite o terceiro número: '))
+
+numeros = [num1, num2, num3]
+numero.sort()
+imprima('os números em ordem crescente são:', numeros)
         
 #11. Faça um programa que leia 3 números e imprima o maior deles.
+def exercicio11()
+num1 = int(input('Digite primeiro número: '))
+num2 = int(input('Digite segundo número: '))
+num3 = int(input('Digite terceiro número: '))
 
+if num1 >= num2 and num1 >= num3:
+    maior = num1
+elif num >= num1 and num2 >= num3:
+    maior = num2
+else:
+    maior = num3
 #12. Faça um programa que leia a idade de uma pessoa e informe:
 #• Se é maior de idade
 #• Se é menor de idade
@@ -154,7 +172,7 @@ def exercicio12()
 #da prova 2 de um aluno. O programa deve imprimir o nome, a nota da prova 1,
 #a nota da prova 2, a média das notas e uma das mensagens: "Aprovado",
 #Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para
-#reprovação e as demais em prova final).
+#reprovação e as demais em prova final
 
 #14. Faça um programa que permita entrar com o salário de uma pessoa e imprima o
 #desconto do INSS segundo a tabela seguir:
