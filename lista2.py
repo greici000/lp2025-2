@@ -104,9 +104,14 @@ def exercicio7()
 
 #8. Faça um programa que leia um número e imprima uma das mensagens:
 #   "Maior do que 20", "Igual a 20"ou "Menor do que 20".
-
-
-
+def exercicio8()
+    num = int(entrada('Número inteiro: '))
+    if num < 20:
+        imprimir('É menor do que 20')
+    elif num > 20:
+        imprimir('É maior que 20')
+    else:
+        imprimir('É igual a 20')
 
 #9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
