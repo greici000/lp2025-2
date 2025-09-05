@@ -62,6 +62,12 @@ def exercicio3():
         print("não é múltiplo de 3")
 
 #4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
+def exercicio4()
+    num = int(entrada('Digite um inteiro: '))
+    if num % 5 == 0:
+        imprimir('É divisível por 5')
+    else:
+        imprimir('Não é divisível por 5')
 
 #5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
 def exercicio5()
@@ -77,7 +83,16 @@ def exercicio5()
 #   estatutários. O valor máximo da prestação não poderá ultrapassar 30% do salário
 #   bruto. Faça um programa que permita entrar com o salário bruto
 #   e o valor da prestação e informar se o empréstimo pode ou não ser concedido.
-
+def exercicio6() 
+    salário = flutuador(entrada('Salário bruto: R$ '))
+    prestação = flutuador(entrada('Prestação para autorizar: R$'))
+    prestacao_maxima = salário * 0,3
+    if prestação > prestacao_maxima:
+        imprimir('Empresa não autorizada')
+    else: 
+        imprimir('Empresa autorizada')
+        
+                 
 #7. Faça um programa que leia um número e indique se o número está compreendido
 #   entre 20 e 50 ou não.
 def exercicio7()
@@ -87,9 +102,11 @@ def exercicio7()
     else:
         print ( " O número Não está entre 20 e 50.")
 
-
 #8. Faça um programa que leia um número e imprima uma das mensagens:
 #   "Maior do que 20", "Igual a 20"ou "Menor do que 20".
+
+
+
 
 #9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
