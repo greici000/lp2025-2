@@ -174,6 +174,7 @@ def exercicio12()
 #Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para
 #reprovação e as demais em prova final
 
+
 #14. Faça um programa que permita entrar com o salário de uma pessoa e imprima o
 #desconto do INSS segundo a tabela seguir:
 #Salário Faixa de Desconto
