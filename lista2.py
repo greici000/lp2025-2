@@ -116,7 +116,22 @@ def exercicio8()
 #9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
 #   verificar se o ano de nascimento informado é válido.
+def exercicio9():
+    ano_nasc = int(entrada('Ano de nascimento:'))
+    ano_atual = int(entrada('Ano atual: '))
+if ano_nasc > ano_atual:
+    imprimir('ERRO: Não pode ter nascido no futudo')
+else: 
+    imprimir(f'Idade:{ano_atual - ano_nasc}anos')
 
+def q91()
+dados_str = entrada('Dados de nascimento (dd/mm/aaaa): ')
+imprimir(f'Ano atual:{data e hora.tempo de luta(HOJE,"%Y")}')
+data_nascimento = data e hora.tempo de folga(dados_str, '%d/%m/%Y')
+if data_nascimento > HOJE:
+    imprimir('Data de nascimento inválida!')
+else:
+    imprimir(f'Idade:{int((HOJE - data_nascimento).dias/365)}anos.')
 #10. Faça um programa que leia três números inteiros e imprima os três em ordem
 #crescente.
         
