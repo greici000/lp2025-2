@@ -175,6 +175,13 @@ def exercicio12()
 #Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para
 #reprovação e as demais em prova final
 def exercicio13()
+    nome = input('Digitar nome do aluno')
+    nota1 = int(input('Digitar nota primeiro prova'))
+    nota2 = int(input('Digitar nota segunda prova'))
+ 
+ media = (nota1 + nota2 / 2)
+ 
+
 
 #14. Faça um programa que permita entrar com o salário de uma pessoa e imprima o
 #desconto do INSS segundo a tabela seguir:
@@ -272,3 +279,25 @@ def exercicio13()
 #0,3 1º grupo
 #0,4 1º e 2º grupos
 #0,5 1º, 2º e 3º grupos
+
+menu = '''
+[1] - ler dois números inteiros
+[2] - ler dois números inteiros e fazer a adição
+[3] - é multiplo de 3 ou não é multiplo de 3
+[4] - é divisivel por 5 ou não
+[5] - é divisivel por e 3 e por 7
+[6] - emprestimo consedido ou não
+[7] - o número esta compreendido entre 20 e 50
+[8] - maior que 20, igual a 20, menor que 20
+[9] - imprimir idade 
+[10] - ler número inteiro é exibir em ordem crescente
+[11] - ler 3 número e imprimir maior deles
+[12] - ler idade 
+[13] - resultado da prova 
+[14] - 
+[15] - 
+[16] - 
+[17] - 
+[18] -
+[19] - 
+[20] -
