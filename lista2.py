@@ -36,10 +36,11 @@ def exemploSe_SenaoSe_Senao():
 
 #1. Faça um programa que leia dois valores numéricos inteiros e efetue
 #   a adição, caso o resultado seja maior que 10, apresentá-lo.
-def q1()
+def q1():
      cabecalho('QUESTÃO 1')
-    valor1 = int(input("Digitar o Primeiro valor: ")
-    valor2 = int(input(" Digitar o segundo valor: ")
+   
+    valor1 = int(input("Digitar o Primeiro valor: "))
+    valor2 = int(input(" Digitar o segundo valor: "))
     soma = valor1 + valor2
     if soma > 10:
         print(f" A soma é :{soma} ")
@@ -49,7 +50,7 @@ def q1()
 #   Caso o valor somado seja maior que 20, este deverá ser apresentado
 #   somando-se a ele mais 8, caso o valor somado seja menor ou igual a
 #   20, este deverá ser apresentado subtraindo-se 5.
-def q2()
+def q2():
      cabecalho('QUESTÃO 2')
     valor1 = int(input(" Digite o primeiro valor: "))
     valor2 = int(input(" Digite o segundo valor: "))
@@ -72,7 +73,7 @@ def q3():
         print("não é múltiplo de 3")
 
 #4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
-def q4()
+def q4():
      cabecalho('QUESTÃO 4')
     num = int(entrada('Digite um inteiro: '))
     if num % 5 == 0:
@@ -81,7 +82,7 @@ def q4()
         imprimir('Não é divisível por 5')
 
 #5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
-def q5()
+def q5():
      cabecalho('QUESTÃO 5')
     numero = int(input("Digite um número: ")
 
@@ -95,7 +96,7 @@ def q5()
 #   estatutários. O valor máximo da prestação não poderá ultrapassar 30% do salário
 #   bruto. Faça um programa que permita entrar com o salário bruto
 #   e o valor da prestação e informar se o empréstimo pode ou não ser concedido.
-def q6() 
+def q6(): 
      cabecalho('QUESTÃO 6')
     salário = flutuador(entrada('Salário bruto: R$ '))
     prestação = flutuador(entrada('Prestação para autorizar: R$'))
@@ -108,7 +109,7 @@ def q6()
                  
 #7. Faça um programa que leia um número e indique se o número está compreendido
 #   entre 20 e 50 ou não.
-def q7()
+def q7():
      cabecalho('QUESTÃO 7')
     numero = int(input(" Digite um número: "))
     if numero > 20 and numero < 50: 
@@ -118,7 +119,7 @@ def q7()
 
 #8. Faça um programa que leia um número e imprima uma das mensagens:
 #   "Maior do que 20", "Igual a 20"ou "Menor do que 20".
-def q8()
+def q8():
      cabecalho('QUESTÃO 8')
     num = int(entrada('Número inteiro: '))
     if num < 20:
@@ -150,7 +151,7 @@ else:
     imprimir(f'Idade:{int((HOJE - data_nascimento).dias/365)}anos.')
 #10. Faça um programa que leia três números inteiros e imprima os três em ordem
 #crescente.
-def q10()
+def q10():
      cabecalho('QUESTÃO 10')
 num1 = int(input('Digite o primeiro número: '))
 num2 = int(input('Digite o segundo número: '))
@@ -161,7 +162,7 @@ numero.sort()
 imprima('os números em ordem crescente são:', numeros)
         
 #11. Faça um programa que leia 3 números e imprima o maior deles.
-def q11()
+def q11():
    cabecalho('QUESTÃO 11')
 num1 = int(input('Digite primeiro número: '))
 num2 = int(input('Digite segundo número: '))
@@ -177,7 +178,7 @@ else:
 #• Se é maior de idade
 #• Se é menor de idade
 #• Se é maior de 65 anos
-def q12()
+def q12():
      cabecalho('QUESTÃO 12')
     idade = int(input(" Digite a idade: "))
     if idade >= 18 : 
@@ -193,7 +194,7 @@ def q12()
 #a nota da prova 2, a média das notas e uma das mensagens: "Aprovado",
 #Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para
 #reprovação e as demais em prova final
-def q13()
+def q13():
      cabecalho('QUESTÃO 13')
     nome = input('Digitar nome do aluno')
     nota1 = int(input('Digitar nota primeiro prova'))
@@ -242,7 +243,7 @@ def q14():
 #15. Um comerciante comprou um produto e quer vendê-lo com um lucro de 45% se o
 #valor da compra for menor que R$20,00, caso contrário, o lucro será de 30%.
 #Faça um programa que leia o valor do produto e imprima o valor da venda.
-def q15()
+def q15():
      cabecalho('QUESTÃO 15')
     valor_compra = float(input("Digitar valor do produto: R$ "))
     lucro = 0
@@ -264,7 +265,7 @@ def q15()
 #Juvenil A 11 - 13 anos
 #Juvenil B 14 - 17 anos
 #Sênior maiores de 18 anos
-def q16()
+def q16():
      cabecalho('QUESTÃO 16')       
     idade = int(input("Digite a idade do nadador; "))
     if idade >= 5 and idade <= 7:
@@ -294,7 +295,7 @@ def q16()
 #Acima de 45 até 59 anos R$150,00
 #Acima de 59 até 65 anos R$250,00
 #Maior que 65 anos R$400,00
-def q17()
+def q17():
     cabecalho('QUESTÃO 17')
     nome = input("Digite o nome da pessoa: ")
     idade = int(input("Digitar a iadde: "))
