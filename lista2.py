@@ -46,6 +46,7 @@ def q1():
         print(f" A soma é :{soma} ")
 
 
+
 #2. Faça um programa que leia dois valores inteiros e efetue a adição.
 #   Caso o valor somado seja maior que 20, este deverá ser apresentado
 #   somando-se a ele mais 8, caso o valor somado seja menor ou igual a
