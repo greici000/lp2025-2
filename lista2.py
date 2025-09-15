@@ -559,35 +559,3 @@ def q25():
     else:
         print("Índice de poluição aceitável. Nenhuma intimação necessária.")
 
-menu = '''
-[1] - Ler dois números inteiros
-[2] - Ler dois números inteiros e fazer a adição
-[3] - É multiplo de 3 ou não é multiplo de 3
-[4] - É divisivel por 5 ou não
-[5] - É divisivel por e 3 e por 7
-[6] - Emprestimo consedido ou não
-[7] - O número esta compreendido entre 20 e 50
-[8] - Maior que 20, igual a 20, menor que 20
-[9] - Imprimir idade 
-[10] - Ler número inteiro é exibir em ordem crescente
-[11] - Ler 3 número e imprimir maior deles
-[12] - Ler idade 
-[13] - Resultado da prova 
-[14] - Calcular o desconto do INSS com base no sálario
-[15] - Calcula o valor da venda do produto com base no persentual de lucro
-[16] - Classifica nadador por catecoria de acordo com a idade
-[17] - Calcula o valor do plano de saúde com base na idade
-[18] - Identifica o nome do mês a parti de um número
-[19] - Calcula a média dos pontos de uma equipe e verifica se foi classificada
-[20] - Calcula o valor de um crédito especial com base no saldo médio
-[21] - Gera um recibo de empréstimo de livro com base no tipo do usuário
-[22] - Estima o consumo de um combustível com base no percurso e tipo de carro
-[23] - Calcula o total de calorias de uma refeição com base nas escholhas do usuário
-[24] - Imforma o mês de renovação do emplacamento a partir do último dígito da placa
-[25] - Imprime intimações para indústrias com base no ídice de poluição
-
-Digite a opção a ser executada: 
-'''
-
-opcao = input(menu)
-eval(f'q{opcao}()')

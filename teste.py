@@ -30,3 +30,4 @@ def q12():
     btn_ok.grid(row=1, column=0, columnspan=2)
     window.mainloop()
 
+q12()
