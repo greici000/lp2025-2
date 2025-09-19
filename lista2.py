@@ -298,19 +298,19 @@ def q18():
 #• Mostrar esses em ordem decrescente;
 #• Se a soma dos pontos for maior do que 100, imprimir a média aritmética entre eles,
 #  caso contrário, imprimir a mensagem "Equipe desclassificada".
-def q19()
+def q19():
     jogador1 = int(input('Digite a pontuação do jogador1: '))       
     jogador2 = int(input('Digite a pontuação do jogador2: '))
     jogador3 = int(input('Digite a pontuação do jogador3: '))
     pontos_equipe = [jogador1, jogador2, jogador3]
     pontos_equipe.sort(reverse=True)    
-    print('\Pontuações em ordem descrecente:',pontos_equipe)
+    print("\nPontuações em ordem descrecente:",pontos_equipe)
     soma_pontos = sum(pontos_equipe)    
     if soma_pontos > 100:
         media_pontos = soma_pontos / 3
         print(f"\nA equipe desclassificada! a média de pontos é: {media_pontos:.2f}")
-    else
-        printe("\nEquipe desclassificada.")                 
+    else:
+        print("\nEquipe desclassificada.")                 
     
 
 #20. O banco XXX concederá um crédito especial com juros de 2% aos seus clientes de
