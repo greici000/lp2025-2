@@ -1,221 +1,194 @@
 '''
 Exercícios sobre os comandos de condição em python
 '''
-def cabecalho(titulo):
-    print('========================================')
-    print(f'============= {titulo} ===============')
-    print('========================================')
-
-
-
-
-def exemploSe():
-    idade = int(input('Idade:'))
-    if idade >= 18:
-        print('Maior de idade')
-
-def exemploSeSenao():
-    idade = int(input('Idade:'))
-    if idade >= 18:
-        print('Maior de idade')    
-    else:
-        print('Menor de idade')
-    print('fim do programa')
-
-def exemploSe_SenaoSe_Senao():
-    idade = int(input('Idade:'))
-    if idade < 18:
-        print('Menor de idade')    
-    elif idade < 65:
-        print('Maior de idade')
-    elif idade < 50:
-        print('Pessoa madura')
-    else:
-        print('Idoso')
-    print('fim do programa')
-
 #1. Faça um programa que leia dois valores numéricos inteiros e efetue
 #   a adição, caso o resultado seja maior que 10, apresentá-lo.
 def q1():
-     cabecalho('QUESTÃO 1')
-   
-    valor1 = int(input("Digitar o Primeiro valor: "))
-    valor2 = int(input(" Digitar o segundo valor: "))
-    soma = valor1 + valor2
+    n1 = int(input('Digite um valor inteiro: '))
+    n2 = int(input('Digite outro valor inteiro: '))
+    soma = n1 + n2
     if soma > 10:
-        print(f" A soma é :{soma} ")
-
-
+        print(soma)
 
 #2. Faça um programa que leia dois valores inteiros e efetue a adição.
 #   Caso o valor somado seja maior que 20, este deverá ser apresentado
 #   somando-se a ele mais 8, caso o valor somado seja menor ou igual a
 #   20, este deverá ser apresentado subtraindo-se 5.
 def q2():
-     cabecalho('QUESTÃO 2')
-    valor1 = int(input(" Digite o primeiro valor: "))
-    valor2 = int(input(" Digite o segundo valor: "))
-    soma = valor + valor2 
-    if soma > 20 : 
-        resultado = soma + 8 
-    else: 
-        resultado = soma -5 
-    print(f " O resultado final é : {resultado}")
+    n1 = int(input('Digite um valor inteiro: '))
+    n2 = int(input('Digite outro valor inteiro: '))
+    soma = n1 + n2
+    if soma > 20:
+        print(soma + 8)
+    else:
+        print(soma - 5)    
 
 #3. Faça um programa que leia um número e imprima uma das duas mensagens:
 #   "É múltiplo de 3"ou "Não é múltiplo de 3".
 def q3():
-     cabecalho('QUESTÃO 3')
-    numero= int(input("Digite um número: "))
-
-    if numero % 3 == 0: 
-        print("É múltiplo de 3")
-    else: 
-        print("não é múltiplo de 3")
+    num = int(input('Digite um inteiro: '))
+    if num % 3 == 0:
+        print('É múltiplo de 3')
+    else:
+        print('Não é múltiplo de 3')
 
 #4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
 def q4():
-     cabecalho('QUESTÃO 4')
-    num = int(entrada('Digite um inteiro: '))
+    num = int(input('Digite um inteiro: '))
     if num % 5 == 0:
-        imprimir('É divisível por 5')
+        print('É divisível por 5')
     else:
-        imprimir('Não é divisível por 5')
+        print('Não é divisível por 5')
 
 #5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
 def q5():
-     cabecalho('QUESTÃO 5')
-    numero = int(input("Digite um número: ")
+    num = int(input('Digite um inteiro: '))
+    if num % 3 == 0 and num % 7 == 0:
+        print('É divisível por 3 e 7')
+    else:
+        print('Não é divisível por 3 e 7')
 
-    if numero % 3 == 0 and numero % 7 == 0
-        print(" É divisível por 3 e por 7 ")
-                 else: 
-                 print( " não é divisível por 3 é por 7 ")
-
-                 
 #6. A prefeitura do Rio de Janeiro abriu uma linha de crédito para os funcionários
 #   estatutários. O valor máximo da prestação não poderá ultrapassar 30% do salário
 #   bruto. Faça um programa que permita entrar com o salário bruto
 #   e o valor da prestação e informar se o empréstimo pode ou não ser concedido.
-def q6(): 
-     cabecalho('QUESTÃO 6')
-    salário = flutuador(entrada('Salário bruto: R$ '))
-    prestação = flutuador(entrada('Prestação para autorizar: R$'))
-    prestacao_maxima = salário * 0,3
-    if prestação > prestacao_maxima:
-        imprimir('Empresa não autorizada')
-    else: 
-        imprimir('Empresa autorizada')
-        
-                 
+def q6():
+    salario = float(input('Salário bruto: R$ '))
+    prestacao = float(input('Prestação para autorizar: R$ '))
+    prestacao_maxima = salario * 0.3
+    if prestacao > prestacao_maxima:
+        print('Empréstimo não autorizado')
+    else:
+        print('Empréstimo autorizado')
+
 #7. Faça um programa que leia um número e indique se o número está compreendido
 #   entre 20 e 50 ou não.
 def q7():
-     cabecalho('QUESTÃO 7')
-    numero = int(input(" Digite um número: "))
-    if numero > 20 and numero < 50: 
-        print ( " O número está entre 20 e 50.")
+    num = int(input('Número inteiro: '))
+    if 20<=num<=50: # num >= 20 and num <= 50
+        print('Está entre 20 e 50')
     else:
-        print ( " O número Não está entre 20 e 50.")
+        print('Não está entre 20 e 50')
 
 #8. Faça um programa que leia um número e imprima uma das mensagens:
 #   "Maior do que 20", "Igual a 20"ou "Menor do que 20".
 def q8():
-     cabecalho('QUESTÃO 8')
-    num = int(entrada('Número inteiro: '))
+    num = int(input('Número inteiro: '))
     if num < 20:
-        imprimir('É menor do que 20')
+        print('É menor do que 20')
     elif num > 20:
-        imprimir('É maior que 20')
+        print('É maior do que 20')
     else:
-        imprimir('É igual a 20')
+        print('É igual a 20')
 
 #9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
 #   verificar se o ano de nascimento informado é válido.
 def q9():
-     cabecalho('QUESTÃO 9')
-    ano_nasc = int(entrada('Ano de nascimento:'))
-    ano_atual = int(entrada('Ano atual: '))
-if ano_nasc > ano_atual:
-    imprimir('ERRO: Não pode ter nascido no futudo')
-else: 
-    imprimir(f'Idade:{ano_atual - ano_nasc}anos')
+    ano_nasc = int(input('Ano de nascimento: '))
+    ano_atual = int(input('Ano atual: '))
+    if ano_nasc > ano_atual:
+        print('ERRO: Não pode ter nascido no futuro')
+    else:
+        print(f'Idade: {ano_atual - ano_nasc} anos')
 
-def q91()
-dados_str = entrada('Dados de nascimento (dd/mm/aaaa): ')
-imprimir(f'Ano atual:{data e hora.tempo de luta(HOJE,"%Y")}')
-data_nascimento = data e hora.tempo de folga(dados_str, '%d/%m/%Y')
-if data_nascimento > HOJE:
-    imprimir('Data de nascimento inválida!')
-else:
-    imprimir(f'Idade:{int((HOJE - data_nascimento).dias/365)}anos.')
+def q91():
+    data_str = input('Data de nascimento (dd/mm/aaaa): ')
+    print(f'Ano atual: {datetime.strftime(HOJE,"%Y")}')
+    data_nascimento = datetime.strptime(data_str, '%d/%m/%Y')
+    if data_nascimento > HOJE:
+        print('Data de nascimento inválida!')
+    else:
+        print(f'Idade: {int((HOJE - data_nascimento).days/365)} anos.')
+
 #10. Faça um programa que leia três números inteiros e imprima os três em ordem
 #crescente.
 def q10():
-     cabecalho('QUESTÃO 10')
-num1 = int(input('Digite o primeiro número: '))
-num2 = int(input('Digite o segundo número: '))
-num3 = int(input('Digite o terceiro número: '))
+    a = int(input('Número: '))
+    b = int(input('Número: '))
+    c = int(input('Número: '))
+    if a<b<c:
+        print(a,b,c)
+    if a<c<b:
+        print(a,c,b)
+    if b<a<c:
+        print(b,a,c)
+    if b<c<a:
+        print(b,c,a)
+    if c<a<b:
+        print(c,a,b)
+    if c<b<a:
+        print(c,b,a)
 
-numeros = [num1, num2, num3]
-numero.sort()
-imprima('os números em ordem crescente são:', numeros)
-        
+
 #11. Faça um programa que leia 3 números e imprima o maior deles.
 def q11():
-   cabecalho('QUESTÃO 11')
-num1 = int(input('Digite primeiro número: '))
-num2 = int(input('Digite segundo número: '))
-num3 = int(input('Digite terceiro número: '))
+    num = int(input('Número: '))
+    maior = num
+    num = int(input('Número: '))
+    if num > maior:
+        maior = num
+    num = int(input('Número: '))
+    if num > maior:
+        maior = num
+    print(maior)
 
-if num1 >= num2 and num1 >= num3:
-    maior = num1
-elif num >= num1 and num2 >= num3:
-    maior = num2
-else:
-    maior = num3
+def q112():
+    a = int(input('Número: '))
+    b = int(input('Número: '))
+    c = int(input('Número: '))
+    print(max([a,b,c]))
+
 #12. Faça um programa que leia a idade de uma pessoa e informe:
 #• Se é maior de idade
 #• Se é menor de idade
 #• Se é maior de 65 anos
 def q12():
-     cabecalho('QUESTÃO 12')
-    idade = int(input(" Digite a idade: "))
-    if idade >= 18 : 
-        print(" Maior de idade")
-    if idade < 18 : 
-        print( " Menor de idade")
-    if idade > 65 : 
-        print( " Maior de 65 anos")
+    def show_idade():
+        idade = int(txt_idade.get())
+        msg=''
+        if idade <18:
+            msg = 'Menor de Idade'
+        elif idade >= 65:
+            msg = 'Melhor idade'
+        else:
+            msg = 'Maior idade'
+        messagebox.showinfo(
+            title='Situação da Idade:',
+            message=f'{msg}'
+        )
+        txt_idade.delete(0,len(txt_idade.get()))
         
+    window = Tk()
+    window.title('Questão 12')
+    window.config(padx=10, pady=10)
+    lbl_idade = Label(text='Idade:')
+    lbl_idade.grid(row=0, column=0)
+    global txt_idade
+    txt_idade = Entry(width=4)
+    txt_idade.grid(row=0,column=1)
+    txt_idade.focus()
+    btn_ok = Button(text='OK', width=5, command=show_idade)
+    btn_ok.grid(row=1, column=0, columnspan=2)
+    window.mainloop()
 
 #13. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota
 #da prova 2 de um aluno. O programa deve imprimir o nome, a nota da prova 1,
 #a nota da prova 2, a média das notas e uma das mensagens: "Aprovado",
-#Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para
-#reprovação e as demais em prova final
+#"Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para
+#reprovação e as demais em prova final).
 def q13():
-     cabecalho('QUESTÃO 13')
-    nome = input('Digitar nome do aluno')
-    nota1 = int(input('Digitar nota primeiro prova'))
-    nota2 = int(input('Digitar nota segunda prova'))
- 
-    media = (nota1 + nota2 ) / 2
-    print(f"NOME: {nota1}")
-    print(f"Nota 1: {nota1}")
-    print(f"Nota 2: {nota2}")
-    print(f"Média: {media}")
-
-if media >= 7:
-    print("Aprovado")
-elif media < 3:
-    print("Reprovado")
-else:
-    print("Em prova final") 
-
- 
-
+    nome = input('Nome: ')
+    n1 = float(input('Nota 1: '))
+    n2 = float(input('Nota 2: '))
+    media = (n1 + n2)/2
+    print(f'{nome}: {n1}, {n2} = {media}')
+    if media >= 7:
+        print('Situação: Aprovado')
+    elif media >= 3:
+        print('Situação: Prova Final')
+    else:
+        print('Situação: Reprovado')
 
 #14. Faça um programa que permita entrar com o salário de uma pessoa e imprima o
 #desconto do INSS segundo a tabela seguir:
@@ -225,41 +198,32 @@ else:
 #Maior que R$1200,00 e menor ou igual a R$2000,00 25%
 #Maior que R$2000,00 30%
 def q14():
-     cabecalho('QUESTÃO 14')
-    salario = float(input("Digite o valor do salário: R$ "))
-    desconto_inss = 0
-
+    salario = float(input('Salário: '))
+    desconto_inss = float(0)
     if salario <= 600:
         desconto_inss = 0
     elif salario <= 1200:
-        desconto_inss = salario * 0.20
+        desconto_inss = salario * 0.2
     elif salario <= 2000:
-        desconto_inss salario * 0.25
+        desconto_inss = salario * 0.25
     else:
-        desconto_inss = salario *0.30
-
-    print(f"Salário: R$ {salario:.2f}")
-    print(f"Desconto do INSS: R$ {desconto_inss:.2f}")        
+        desconto_inss = salario * 0.3
+    print(f'Desconto do INSS: R$ {desconto_inss}')
+    print(f'Salário Líquido: R$ {salario - desconto}')
 
 #15. Um comerciante comprou um produto e quer vendê-lo com um lucro de 45% se o
 #valor da compra for menor que R$20,00, caso contrário, o lucro será de 30%.
 #Faça um programa que leia o valor do produto e imprima o valor da venda.
 def q15():
-     cabecalho('QUESTÃO 15')
-    valor_compra = float(input("Digitar valor do produto: R$ "))
-    lucro = 0
-    if valor_compra < 20:
-        lucro = valor_compra * 0.45
+    valor = float(input('Valor do produto: R$'))
+    if valor < 20:
+        print(f'Valor de Venda: R$ {valor * 1.45}')
     else:
-        lucro = valor_compra * 0.30
+        print(f'Valor de Venda: R$ {valor * 1.3}')
 
-    valor_venda = valor_compra + lucro
-    print(f"valor da compra: R$ {valor_copra:.2f}")
-    print(f"Valor da venda: R$ {valor_venda:.2f}")
-
-#A confederação brasileira de natação irá promover eliminatórias para o
+#16. A confederação brasileira de natação irá promover eliminatórias para o
 #próximo mundial. Faça um programa que receba a idade de um nadador e imprima
-#a sua categoria segundo a tabela a seguir:            
+#a sua categoria segundo a tabela a seguir:
 #Categoria Idade
 #Infantil A 5 - 7 anos
 #Infantil B 8 - 10 anos
@@ -267,22 +231,19 @@ def q15():
 #Juvenil B 14 - 17 anos
 #Sênior maiores de 18 anos
 def q16():
-     cabecalho('QUESTÃO 16')       
-    idade = int(input("Digite a idade do nadador; "))
-    if idade >= 5 and idade <= 7:
-        print("Categoria: Infantil A")
-    elif idade >= 8 and idade <= 10:
-        print("Categoria: Infantil B")
-    elif idade >= 11 and idade <= 13:
-        print("Categoria: Juvenil A")
-    elif idade >= 14 and idade <= 17:
-        print("Categoria: Juvenil B")
-    elif idade >= 18:
-        print("Categoria: Sênior")
+    idade = int(input('Idade do nadador(a): '))
+    if idade < 5:
+        print('Não habilitado para participar')
+    elif idade <= 7:
+        print('Infantil A')
+    elif idade <= 10:
+        print('Infantil B')
+    elif idade <= 13:
+        print('Juvenil A')
+    elif idade <= 17:
+        print('Juvenil B')
     else:
-        print("Idade não se encaixa em nem uma das categorias dísponivel")
-
-
+        print('Sênior')
 
 #17. Depois da liberação do governo para as mensalidades dos planos de saúde,
 #as pessoas começaram a fazer pesquisas para descobrir um bom plano, não
@@ -297,60 +258,37 @@ def q16():
 #Acima de 59 até 65 anos R$250,00
 #Maior que 65 anos R$400,00
 def q17():
-    cabecalho('QUESTÃO 17')
-    nome = input("Digite o nome da pessoa: ")
-    idade = int(input("Digitar a iadde: "))
-
-    valor = 0
+    nome = input('Nome: ')
+    idade = int(input('Idade: '))
     if idade <= 10:
-        valor = 30.00
+        print('Valor do plano R$: 30,00')
     elif idade <= 29:
-        valor = 60.00
+        print('Valor do plano R$: 60,00')
     elif idade <= 45:
-        valor = 120.0
+        print('Valor do plano R$: 120,00')
     elif idade <= 59:
-        valor = 150.00
+        print('Valor do plano R$: 150,00')
     elif idade <= 65:
-        valor = 250.00
+        print('Valor do plano R$: 250,00')
     else:
-        valor = 400.00
-    print(f"\nNome: {nome}")
-    print(f"Valor a pagar: R$ {valor:.2f}")
-
+        print('Valor do plano R$: 400,00')    
 
 #18. Faça um programa que leia um número inteiro entre 1 e 12 e escreva o mês
 #correspondente. Caso o usuário digite um número fora desse intervalo, deverá
 #aparecer uma mensagem informando que não existe mês com este número.
 def q18():
-     cabecalho('QUESTÃO 18')
-    mes = int(input("Digite um número inteiro entre 1 e 12: "))
-    
-    if mes == 1:
-        print("Janeiro")
-    elif mes == 2:
-        print("Fevereiro")
-    elif mes == 3:
-        print("Março")
-    elif mes == 4:
-        print("Abril")
-    elif mes == 5:
-        print("Maio")
-    elif mes == 6:
-        print("Junho")
-    elif mes == 7:
-        print("Julho")
-    elif mes == 8:
-        print("Agosto")
-    elif mes == 9:
-        print("Setembro")
-    elif mes == 10:
-        print("Outubro")
-    elif mes == 11:
-        print("Novembro")
-    elif mes == 12:
-        print("Dezembro")
-    else:
-        print("Não existe mês com este número.")
+    mes = int(input('Digite o número do mês: '))
+    match mes:
+        case 1:
+            print('Janeiro')
+        case 2:
+            print('Fevereiro')
+        case 3:
+            print('Março')
+        case 4:
+            print('Abril')
+        case _:
+            print('Mês Inválido!')
 
 #19. Em um campeonato nacional de arco-e-flecha, tem-se equipes de três jogadores
 #para cada estado. Sabendo-se que os arqueiros de uma equipe não obtiveram o
@@ -360,24 +298,21 @@ def q18():
 #• Mostrar esses em ordem decrescente;
 #• Se a soma dos pontos for maior do que 100, imprimir a média aritmética entre eles,
 #  caso contrário, imprimir a mensagem "Equipe desclassificada".
-def q19():
-     cabecalho('QUESTÃO 19')
-    ponto1 = int(input("Digite os pontos do jogador 1: "))
-    ponto2 = int(input("Digite os pontos do jogador 2: "))
-    ponto3 = int(input("Digite os pontos do jogador 3: "))
-    
-    pontos = [ponto1, ponto2, ponto3]
-    pontos.sort(reverse=True)
-    
-    print("Pontos em ordem decrescente:", pontos)
-    
-    soma_pontos = sum(pontos)
-    
+def q19()
+    jogador1 = int(input('Digite a pontuação do jogador1: '))       
+    jogador2 = int(input('Digite a pontuação do jogador2: '))
+    jogador3 = int(input('Digite a pontuação do jogador3: '))
+    pontos_equipe = [jogador1, jogador2, jogador3]
+    pontos_equipe.sort(reverse=True)    
+    print('\Pontuações em ordem descrecente:',pontos_equipe)
+    soma_pontos = sum(pontos_equipe)    
     if soma_pontos > 100:
-        media = soma_pontos / 3
-        print(f"Média aritmética: {media:.2f}")
-    else:
-        print("Equipe desclassificada")
+        media_pontos = soma_pontos / 3
+        print(f"\nA equipe desclassificada! a média de pontos é: {media_pontos:.2f}")
+    else
+        printe("\nEquipe desclassificada.")                 
+    
+
 #20. O banco XXX concederá um crédito especial com juros de 2% aos seus clientes de
 #acordo com o saldo médio no último ano. Faça um programa que leia o saldo médio
 #de um cliente e calcule o valor do crédito de acordo com a tabela a seguir.
@@ -389,7 +324,7 @@ def q19():
 #de 1001 a 3000 40% do valor do saldo médio
 #acima de 3001 50% do valor do saldo médio
 def q20():
-     cabecalho('QUESTÃO 20')
+     
     saldo_medio = float(input("Digite o saldo médio do cliente: R$ "))
     
     credito = 0
@@ -411,7 +346,7 @@ def q20():
 #• Tipo de usuário:
 #• Total de dias:
 def q21():
-     cabecalho('QUESTÃO 21')
+     
     nome_livro = input("Nome do livro: ")
     tipo_usuario = input("Tipo de usuário (professor ou aluno): ")
     
@@ -434,7 +369,7 @@ def q21():
 #informe o consumo estimado de combustível, sabendo-se que um carro tipo A faz
 #12 km com um litro de gasolina, um tipo B faz 9 km e o tipo C 8 km por litro.
 def q22():
-     cabecalho('QUESTÃO 22')
+     
     percurso_km = float(input("Digite o percurso em quilômetros: "))
     tipo_carro = input("Digite o tipo do carro (A, B ou C): ").upper()
     
@@ -451,8 +386,6 @@ def q22():
     
     print(f"\nO consumo estimado de combustível é de {consumo_litros:.2f} litros.")
 
-
-
 #23. Crie um programa que informe a quantidade total de calorias de uma refeição
 #a partir da escolha do usuário que deverá informar o prato, a sobremesa, e
 #bebida conforme a tabela a seguir.
@@ -461,55 +394,33 @@ def q22():
 #Peixe          230cal Sorvete diet     110cal Suco de laranja   70cal
 #Frango         250cal Mousse diet      170cal Suco de melão     100cal
 #Carne          350cal Mousse chocolate 200cal Refrigerante diet 65cal
-
 def q23():
-     cabecalho('QUESTÃO 23')
-    prato_calorias = {'Vegetariano': 180, 'Peixe': 230, 'Frango': 250, 'Carne': 350}
-    sobremesa_calorias = {'Abacaxi': 75, 'Sorvete diet': 110, 'Mousse diet': 170, 'Mousse chocolate': 200}
-    bebida_calorias = {'Chá': 20, 'Suco de laranja': 70, 'Suco de melão': 100, 'Refrigerante diet': 65}
+    prato = input('Prato (vegetariano/peixe/frango/carne): ')
+    calorias = 0
+    calorias += 180 if prato == 'vegetariano' else 0
+    calorias += 230 if prato == 'peixe' else 0
+    calorias += 250 if prato == 'frango' else 0
+    calorias += 350 if prato == 'carne' else 0
+    sobremesa = input('Sobremesa: (abacaxi/sorvete/mousse diet/mousse chocolate): ')
+    calorias += 75 if sobremesa == 'abacaxi' else 0
+    calorias += 110 if sobremesa == 'sorvete' else 0
+    calorias += 170 if sobremesa == 'mousse diet' else 0
+    calorias += 200 if sobremesa == 'mousse chocolate' else 0    
+    bebida = input('Bebida: (chá/laranja/melão/refrigerante): ')
+    calorias += 20 if bebida == 'chá' else 0
+    calorias += 70 if bebida == 'laranja' else 0
+    calorias += 100 if bebida == 'melão' else 0
+    calorias += 65 if bebida == 'refrigerante' else 0
 
-    print("Pratos: Vegetariano, Peixe, Frango, Carne")
-    prato_escolhido = input("Escolha um prato: ")
-
-    print("Sobremesas: Abacaxi, Sorvete diet, Mousse diet, Mousse chocolate")
-    sobremesa_escolhida = input("Escolha uma sobremesa: ")
-
-    print("Bebidas: Chá, Suco de laranja, Suco de melão, Refrigerante diet")
-    bebida_escolhida = input("Escolha uma bebida: ")
-    
-    total_calorias = 0
-    
-    
-    if prato_escolhido in prato_calorias:
-        total_calorias += prato_calorias[prato_escolhido]
-    else:
-        print(f"Prato '{prato_escolhido}' inválido.")
-        return
-
-    
-    if sobremesa_escolhida in sobremesa_calorias:
-        total_calorias += sobremesa_calorias[sobremesa_escolhida]
-    else:
-        print(f"Sobremesa '{sobremesa_escolhida}' inválida.")
-        return
-
-
-    if bebida_escolhida in bebida_calorias:
-        total_calorias += bebida_calorias[bebida_escolhida]
-    else:
-        print(f"Bebida '{bebida_escolhida}' inválida.")
-        return
-    
-    print(f"\nO total de calorias da sua refeição é de {total_calorias} calorias.")
+    print(f'Total de calorias do pedido: {calorias} cal')
 
 #24. A polícia rodoviária resolveu fazer cumprir a lei e vistoriar veículos para
 #cobrar dos motoristas o DUT. Sabendo-se que o mês em que o emplacamento do
 #carro deve ser renovado é determinado pelo último número da placa do mesmo,
 #faça um programa que, a partir da leitura da placa do carro, informe o mês
 #em que o emplacamento deve ser renovado.
-
 def q24():
-     cabecalho('QUESTÃO 24')
+    
     placa = input("Digite a placa do carro (ex: ABC1234): ")
     if len(placa) < 1:
         print("Placa inválida.")
@@ -547,7 +458,7 @@ def q24():
 #0,4 1º e 2º grupos
 #0,5 1º, 2º e 3º grupos
 def q25():
-     cabecalho('QUESTÃO 25')
+     
     indice = float(input("Digite o índice de poluição: "))
 
     if indice >= 0.5:
@@ -559,3 +470,5 @@ def q25():
     else:
         print("Índice de poluição aceitável. Nenhuma intimação necessária.")
 
+opcao = input('Digite o número da questão: ')
+eval(f'q{opcao}()')
