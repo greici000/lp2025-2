@@ -1,4 +1,4 @@
-''''''
+'''
 Lista de Exercícios referentes a estruturas de iteração (repetição)
 '''
 
@@ -22,10 +22,19 @@ def exemploEnquanto():
             continue
         print(contador, end=' ')
 
-#1.Faça um programa que imprima todos os números de 1 até 100. 
-
+#1.Faça um programa que imprima todos os números de 1 até 100.  
+def q1():
+    for x in range(1,101):
+        print(x, end=' ')
+    print('')
 
 #2. Faça um programa que imprima todos os números pares de 100 até 1.
+def q2():
+    numero = 1
+    while numero >= (100
+        
+
+
 
 #3. Faça um programa que imprima os múltiplos de 5, no intervalo de 1 até 500.
 
