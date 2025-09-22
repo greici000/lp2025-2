@@ -30,17 +30,33 @@ def q1():
 
 #2. Faça um programa que imprima todos os números pares de 100 até 1.
 def q2():
-    numero = 1
-    while numero >= (100
+    for num in range(100,0,-1):
+        if num % 2 ==0: 
+         print(num, end=' ')
+    print('')
+        
+
         
 
 
 
 #3. Faça um programa que imprima os múltiplos de 5, no intervalo de 1 até 500.
+def q3():
+    for num in range(1,501):
+        if num % 5 ==0:
+          print(num, end=' ')
+    print('')
 
 #4. Faça um programa que permita entrar com o nome, a idade e o sexo de 20
 #pessoas.O programa deve imprimir o nome da pessoa se ela for do sexo masculino
 #e tiver mais de 21 anos.
+def q4():
+    for x in range(20):
+        nome = input("Digite o nome da pessoa: ")
+        idade = int(input("Digite a idade da pessoa: "))
+        sexo = input("Digite o sexo da pessoa (M/F):")
+        if (sexo == 'M' or sexo =='m') and idade > 21:
+         print(f"Nome da pessoa que atende os critérios: {nome}")
 
 #5. Sabendo-se que a unidade lógica e aritmética calcula o produto através de somas
 #sucessivas, crie um programa que calcule o produto de dois números inteiros
