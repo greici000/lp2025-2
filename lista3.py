@@ -76,12 +76,21 @@ def q5():
 #• 1 + 2 = 3, quarto termo, etc.
 # 1 1 2 3 5 8 13 21
 def q6():
-    Fibonacci_for(n_termos=20)
+    def q6():
+    ant = 0  # anterior
+    atu = 1  # atual
+    for _ in range(20):
+        print(atu, end=' ')
+        prox = ant + atu  # proximo
+        ant = atu
+        atu = prox
+
 
 #7. Crie um programa que permita entrar com o nome, a nota da
 #prova 1 e da prova 2 de 15 alunos. Ao final, imprimir uma listagem, contendo:
 #nome, nota da prova 1, nota da prova 2, e média das notas de cada aluno. Ao final,
 #imprimir a média geral da turma.
+
 
 #8. Faça um programa que permita entrar com o nome e o salário bruto de 10 pessoas.
 #Após ler os dados, imprimir o nome e o valor da alíquota do imposto de renda
