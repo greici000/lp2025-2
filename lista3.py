@@ -100,6 +100,31 @@ def q7():
 #Salário menor que R$1300,00 Isento
 #Salário maior ou igual a R$1300,00 e menor que R$2300,00 10% do salário bruto
 #Salário maior ou igual a R$2300,00 15% do salário bruto
+def q8():
+    num_de_pessoas = 10
+    print('Cálculo do imposto de renda (IRPF) para 10 pessoas')
+    for i in range(num_de_pessoas):
+        nome = input(f'pessoa {i + 1}: Digitar o nome:')
+        salario_bruto = float(input(f"Pessoa {i + 1}: Digitar o salário bruto: R$ "))
+        aliquota = 0.0
+        if salario_bruto < 1300.00:
+            aliquota = 0.0
+        elif salario_bruto < 2300.00:
+            aliquota = 0.10
+        else:
+            aliquota = 0.15
+        valor_irpf = salario_bruto * aliquota
+        print("-" * 30)
+        print(f'Nome: {nome}')
+        print(f'Salário Bruto: R$ {salario_bruto:.2f}')
+        if aliquota == 0.0:
+            print('IRPF: ISENTO')
+        else:
+            print(f'Alíquota: {aliquota * 100:.0f}%')
+            print(f'Valor do IRPF a ser pago: R$ {valor_irpf:.2f}')
+        print("-" * 30)
+
+
 
 #9. No dia da estreia do filme "Procurando Dory", uma grande emissora de TV realizou
 #uma pesquisa logo após o encerramento do filme. Cada espectador respondeu
@@ -110,6 +135,43 @@ def q7():
 #• A quantidade de pessoas que responderam regular;
 #• A percentagem de pessoas que responderam bom entre todos os expectadores
 #analisados.
+def q9():
+    num_de_espectadores = 20
+    
+    soma_idade_excelente = 0
+    quantidade_excelente = 0
+    quantidade_regular = 0
+    quantidade_bom = 0
+    print('Pesquisa de Opinião  "Procurando Dory" para 20 pessoas')
+    for i in range(num_de_espectadores):
+        print(f'\n Espectador {i + 1} de {num_de_espectadores}')
+        idade = int(input('Digite a idade: '))
+        while True:
+            opiniao = input('Digite a opinião (3-excelente; 2-bom; 1-regular):')
+            if opiniao in ('1','2','3'):
+                break
+            print('Opinião inválida. Digite 1, 2 ou 3')
+        if opiniao == '3':
+            quantidade_excelente += 1
+            soma_idade_excelente += idade
+        elif opiniao == '2':
+            quantidade_bom += 1
+        elif opiniao == '1':
+            quantidade_regular += 1
+        print('\n' + '=' * 50)
+        print('RESULTADOS DA PESQUISA')
+        print('=' * 50)
+        if quantidade_excelente > 0:
+            media_idade = soma_idade_excelente / quantidade_excelente
+            print(f'A média das idades das pessoas que rspondeiram excelente: {media_idade:.1f} anos')
+        else:
+            print('Nenhuma pessoa respondeu "Excelente" ')
+        print(f'A quantidades de pessoas que respondeiram regular:{quantidade_regular}')
+        if num_de_espectadores > 0:
+            porcentagem_bom = (quantidade_bom / num_de_espectadores) * 100
+            print(f'A porcentagem de pessoas que responderam bom: {porcentagem_bom:.2f}%')
+        else:
+            print('Não houve espectadores para análise.')
 
 #10. Em um campeonato Europeu de Volleyball, se inscreveram 30 países. Sabendo-se
 #que na lista oficial de cada país consta, além de outros dados, peso e idade de 12
