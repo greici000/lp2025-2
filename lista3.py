@@ -15,57 +15,48 @@ def exemploPara():
 def exemploEnquanto():
     contador = 0
     while contador < 10:
-        contador += 1               # contador = contador + 1
+        contador += 1               # equivale a contador = contador + 1
         if contador == 7:
-            break
+            break                   # interrompe o laço
         if contador == 3:
-            continue
-        print(contador, end=' ')
+            continue                # salta para a próxima iteração
+        print(contador, end=' ')    # imprime sem quebra de linha
 
-#1.Faça um programa que imprima todos os números de 1 até 100.  
+#1.Faça um programa que imprima todos os números de 1 até 100.
 def q1():
-    for x in range(1,101):
-        print(x, end=' ')
-    print('')
+    for numero in range(100):
+        print(numero+1, end=' ')
 
 #2. Faça um programa que imprima todos os números pares de 100 até 1.
 def q2():
-    for num in range(100,0,-1):
-        if num % 2 ==0: 
-         print(num, end=' ')
-    print('')
-        
-
-        
-
-
+    for numero in range(100,1,-2):
+        print(numero, end=' ')
 
 #3. Faça um programa que imprima os múltiplos de 5, no intervalo de 1 até 500.
 def q3():
-    for num in range(1,501):
-        if num % 5 ==0:
-          print(num, end=' ')
-    print('')
+    for numero in range(5,501,5):
+        print(numero, end=' ')
 
 #4. Faça um programa que permita entrar com o nome, a idade e o sexo de 20
 #pessoas.O programa deve imprimir o nome da pessoa se ela for do sexo masculino
 #e tiver mais de 21 anos.
 def q4():
-    for x in range(20):
-        nome = input("Digite o nome da pessoa: ")
-        idade = int(input("Digite a idade da pessoa: "))
-        sexo = input("Digite o sexo da pessoa (M/F):")
-        if (sexo == 'M' or sexo =='m') and idade > 21:
-         print(f"Nome da pessoa que atende os critérios: {nome}")
+    MAX = 20
+    for pessoa in range(MAX):
+        nome = input('Nome: ')
+        idade = int(input('Idade: '))
+        sexo = input('Sexo(M/F): ')
+        if sexo.upper() == 'M' and idade >= 21:
+            print(nome)
 
 #5. Sabendo-se que a unidade lógica e aritmética calcula o produto através de somas
 #sucessivas, crie um programa que calcule o produto de dois números inteiros
 #lidos. Suponha que os números lidos sejam positivos.
 def q5():
-    num1 = int(input('mutipicador: '))
-    num2 = int(input('mutiplicando: '))
+    num1 = int(input('Multiplicador: '))
+    num2 = int(input('Multiplicando: '))
     soma = 0
-    for x in range(num1):
+    for _ in range(num1):
         soma = soma + num2
     print(f'{num1}*{num2}={soma}')
 
@@ -76,21 +67,31 @@ def q5():
 #• 1 + 2 = 3, quarto termo, etc.
 # 1 1 2 3 5 8 13 21
 def q6():
-    def q6():
-    ant = 0  # anterior
-    atu = 1  # atual
+    ant = 0  
+    atu = 1  
     for _ in range(20):
         print(atu, end=' ')
-        prox = ant + atu  # proximo
+        prox = ant + atu  
         ant = atu
         atu = prox
-
 
 #7. Crie um programa que permita entrar com o nome, a nota da
 #prova 1 e da prova 2 de 15 alunos. Ao final, imprimir uma listagem, contendo:
 #nome, nota da prova 1, nota da prova 2, e média das notas de cada aluno. Ao final,
 #imprimir a média geral da turma.
-
+def q7():
+    resultado = "NOME\tN1\tN2\tMEDIA\n"
+    MAX = 3
+    media_turma = 0
+    for _ in range(MAX):
+        nome = input('Nome: ')
+        n1 = round(float(input('Nota 1: ')),1)
+        n2 = round(float(input('Nota 2: ')),1)
+        media = round((n1 + n2) / 2,1)
+        media_turma += media
+        resultado += f'{nome}\t{n1}\t{n2}\t{media}\n'
+    print(resultado)
+    print(f'Média da Turma: {round(media_turma/MAX,1)}')
 
 #8. Faça um programa que permita entrar com o nome e o salário bruto de 10 pessoas.
 #Após ler os dados, imprimir o nome e o valor da alíquota do imposto de renda
@@ -118,7 +119,27 @@ def q6():
 #• O atleta mais pesado de cada time;
 #• O atleta mais jovem de cada time;
 #• O peso médio e a idade média de todos os participantes.
-    
+def q10():
+    PAISES=3
+    JOGADORES=3
+    soma_peso = 0
+    soma_idade = 0
+    for pais in range(PAISES):
+        print(f'País: {pais}')
+        soma_peso_pais = 0
+        soma_idade_pais = 0
+        for _ in range(JOGADORES):
+            idade = int(input('Idade: '))
+            peso = int(input('Peso: '))
+            soma_peso_pais += peso
+            soma_idade_pais += idade
+            soma_peso += peso
+            soma_idade += idade
+        print(f'Idade média: {soma_idade_pais/JOGADORES}')
+        print(f'Peso médio: {soma_peso_pais/JOGADORES}')
+    print(f'Idade média geral: {soma_idade/JOGADORES*PAISES}')
+    print(f'Peso médio geral: {soma_peso/JOGADORES*PAISES}')
+
 #11. Construa um programa que leia vários números e informe quantos números
 #entre 100 e 200 foram digitados. Quando o valor 0 (zero) for lido, o algoritmo
 #deverá cessar sua execução.
