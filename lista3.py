@@ -205,7 +205,7 @@ def q10():
 #11. Construa um programa que leia vários números e informe quantos números
 #entre 100 e 200 foram digitados. Quando o valor 0 (zero) for lido, o algoritmo
 #deverá cessar sua execução.
-def 11():
+def q11():
     conatdo = 0
     while True:
         numero = random.randrange(201)
@@ -219,9 +219,21 @@ def 11():
 #ano, e um país B com 7 milhões de habitantes e uma taxa de natalidade de 2% ao
 #ano, fazer um programa que calcule e imprima o tempo necessário para que a
 #população do país A ultrapasse a população do país B.
-def 12():
-    pais_A = int 
-
+def q12():
+    populacao_a = 5000000
+    populacao_b = 7000000
+    taxa_a = 0.03
+    taxa_b = 0.02
+    anos = 0
+    print('teste de Crescimento Populacional')
+    while populacao_a <= populacao_b:
+        populacao_a *= (1 + taxa_a)
+        populacao_b *= (1 + taxa_b)
+        anos += 1
+    print(f'Tempo  necessári: {anos} anos')
+    print(f'população final após {anos} anos:')
+    print(f'País A: {int(populacao_a):,} habitantes')
+    print(f'País B: {int(populacao_b):,} habitantes')
 #13. Uma empresa de fornecimento de energia elétrica faz a leitura mensal dos medidores
 #de consumo. Para cada consumidor, são digitados os seguintes dados:
 #• número do consumidor
