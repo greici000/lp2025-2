@@ -219,7 +219,28 @@ def q11():
 #ano, e um país B com 7 milhões de habitantes e uma taxa de natalidade de 2% ao
 #ano, fazer um programa que calcule e imprima o tempo necessário para que a
 #população do país A ultrapasse a população do país B.
-   
+def q12():
+
+    populacao_a = 5000000
+    taxa_a = 0.03
+    populacao_b = 7000000
+    taxa_b = 0.02
+    anos = 0
+    print("--- Simulação de Crescimento Populacional ---")
+    while populacao_a <= populacao_b:
+        populacao_a *= (1 + taxa_a)
+        populacao_b *= (1 + taxa_b)
+
+        if populacao_a <= populacao_b:
+            anos += 1
+        else:
+            anos += 1
+            break
+
+    print(f"Resultado: {anos+ 1} anos")
+    print(f"População final após {anos +1} anos")
+    print(f"País A: {int(populacao_a):,} habitantes") 
+    print(f"País B: {int(populacao_b):,} habitantes")
 #13. Uma empresa de fornecimento de energia elétrica faz a leitura mensal dos medidores
 #de consumo. Para cada consumidor, são digitados os seguintes dados:
 #• número do consumidor
@@ -233,7 +254,54 @@ def q11():
 #• O custo total para cada consumidor
 #• O total de consumo para os três tipos de consumidor
 #• A média de consumo dos tipos 1 e 2
+def q13():
+    print('Cálculo de consumo de Energia Elétrica')
+    print('Insira 0 no "Número do consumidor" para finalizar a leitura.\n')
+    PRECOS = {
+        1: 0.30,
+        2: 0.50,
+        3: 0.70
+    }
 
+    dados_consumo = {
+        1: {'total_kwh': 0, 'contador': 0, 'nome': 'Residencial'},
+        2: {'total_kwh': 0, 'contador': 0, 'nome': 'Comercial'},
+        3: {'total_kwh': 0, 'contador': 0, 'nome': 'Indrustrial'},
+    }
+
+    while True:
+        try:
+            num_consumidor = int(input("Número do consumidor (0 para sair):"))
+            if num_consumidor == 0:
+                break
+            consumo_kwh = float(input('Quantidade de kwh consumidos: "'))
+            tipo_consumidor = int(input('tipo de consumidor (1,2 o 3)'))
+            if tipo_consumidor not in PRECOS or consumo_kwh < 0:
+                print("\nERRO: Tipo ou consumo inválido. Tente novamente.\n")
+                continue
+
+            preco_unitario = PRECOS[tipo_consumidor]
+            custo_total = consumo_kwh * preco_unitario
+
+            print(f'CUSTO TOTAL para o consumidor {num_consumidor}: R$ {custo_total:.2f\n}')
+
+            dados_consumo[tipo_consumidor]['tatal_kwh'] += consumo_kwh
+            dados_consumo[tipo_consumidor]['contador'] += 1
+        except ValueError:
+            print('\nErro: Entrada inválida. Digite números.\n')
+    print('\n' + '='*40)
+    print('RESUMO DOS DADOS GERAIS')
+    print('='*40)
+
+    print('Média de consumo (tipos 1 e 2):')
+    for tipo in [1,2]:
+        dados = dados_consumo[TIPO]
+        nome = dados['nome']
+        if dados['contador'] > 0:
+            media = dados['total_kwh'] / dados['contador']
+            print(f' -{nomes}: {media:.2f} kwh (baseado em {dados['contador']}clientes)')
+        else:
+            print(f' -{nome}: Não houve registros para cálculo.')
 #14. Faça um programa que leia vários números inteiros e apresente o fatorial de cada
 #número. O algoritmo encerra quando se digita um número menor do que 1.n
 
