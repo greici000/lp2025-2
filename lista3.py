@@ -241,6 +241,19 @@ def q12():
     print(f"População final após {anos +1} anos")
     print(f"País A: {int(populacao_a):,} habitantes") 
     print(f"País B: {int(populacao_b):,} habitantes")
+
+
+def q112():
+    paísA = 5_000_000
+    paísB = 7_000_000
+    ano = 0
+    while paísA < paísB:
+        ano += 1
+        paísA += 1.02
+        paísB += 1.03
+    print (f'se passaram {ano} anos para o país A ultrapassar o país B')
+    print(f'população do pais A: {paísA}')
+    print(f'população do país B: {paísB}')   
 #13. Uma empresa de fornecimento de energia elétrica faz a leitura mensal dos medidores
 #de consumo. Para cada consumidor, são digitados os seguintes dados:
 #• número do consumidor
@@ -304,6 +317,19 @@ def q13():
             print(f' -{nome}: Não houve registros para cálculo.')
 #14. Faça um programa que leia vários números inteiros e apresente o fatorial de cada
 #número. O algoritmo encerra quando se digita um número menor do que 1.n
+def q14():  
+    print('Calculadora fatorial')
+    print('Digitar numero inteiro. Se você digitar um numero menor que 1 o programa se encerra')
+    
+    while True:
+        try :
+        entrada = input('\n Digite um numero')
+        numero = int('entarda')
+
+        
+
+
+
 
 #15. Faça um programa que permita entrar com a idade de várias pessoas e
 #imprima:
