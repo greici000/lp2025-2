@@ -318,13 +318,23 @@ def q13():
 #14. Faça um programa que leia vários números inteiros e apresente o fatorial de cada
 #número. O algoritmo encerra quando se digita um número menor do que 1.n
 def q14():  
-    print('Calculadora fatorial')
+    print('Calculo fatorial')
     print('Digitar numero inteiro. Se você digitar um numero menor que 1 o programa se encerra')
     
     while True:
         try :
-        entrada = input('\n Digite um numero')
-        numero = int('entarda')
+            numero = int(input('Digite um número inteiro: '))
+        except ValueError:
+            print('Entrada inválida. digite um número inteiro.')
+            continue
+        if numero < 1:
+            print("Encerrando o cálculo numero menor que 1 digitado")
+            break
+        fatorial = 1
+        for i in range(1, numero + 1):
+            fatorial *= i
+        print(f'O FATORIAL de {numero}! é: {fatorial}\n')
+
 
         
 
@@ -335,6 +345,29 @@ def q14():
 #imprima:
 #• total de pessoas com menos de 21 anos
 #• total de pessoas com mais de 50 anos
+def q15():
+    print('Contagem por idade')
+    print('Para encerrar o programa digite 0 ou um numero negativo.')
+
+    cont_menor_21 = 0
+    cont_maior_50 = 0
+
+    while True:
+        try:
+            idade = int(input('Digite a idade: '))
+        except ValueError:
+            print("Entrada inválida. digite um numero inteiro.")
+            continue
+        if idade <= 0:
+            break
+        if idade < 21:
+            cont_menor_21 += 1
+        elif idade > 50:
+            cont_maior_50 += 1
+    print('\n Resultados')
+    print(f'Total de pessoas com menos de 21 anos: {cont_menor_21}')
+    print(f'Total de pessoas com mais de 50 anos: {cont_maior_50}')
+
 
 #16. Sabendo-se que a unidade lógica e aritmética calcula a divisão por meio de subtrações
 #sucessivas, criar um algoritmo que calcule e imprima o resto da divisão de
@@ -349,6 +382,35 @@ def q14():
 #  5 é o Divisor
 #  2 é o Quociente (resultado inteiro da divisão)
 #  0 é o Resto da Divisão
+def q16():
+    print(" Divisão por Subtrações Sucessivas")
+    
+    try:
+        dividendo = int(input("Digite o Dividendo (maior que o divisor): "))
+        divisor = int(input("Digite o Divisor (positivo): "))
+    except ValueError:
+        print("Entrada inválida. Digite números inteiros.")
+        return
+
+    if divisor <= 0:
+        print("Erro: O divisor deve ser positivo.")
+        return
+    if dividendo < divisor:
+        print("Erro: O Dividendo deve ser maior ou igual ao Divisor para este método.")
+        return
+        
+    quociente = 0
+    resto = dividendo 
+    
+    while resto >= divisor:
+        resto -= divisor    
+        quociente += 1      
+    
+    print(f"\nDivisão de {dividendo} por {divisor}:")
+    print(f"Quociente (Número de subtrações): {quociente}")
+    print(f"Resto da Divisão: {resto}")
+
+
 
 #17. Crie um programa que possa ler um conjunto de pedidos de compra e
 #calcule o valor total da compra. Cada pedido é composto pelos seguintes campos:
@@ -358,7 +420,47 @@ def q14():
 #• quantidade
 #O programa deverá processar novos pedidos até que o usuário digite 0 (zero)
 #como número do pedido.
+def q17():
+    print("--- Cálculo do Valor Total de Compras ---")
+    print("Digite 0 como número do pedido para encerrar.")
 
+    total_compra_geral = 0.0
+    
+    while True:
+        try:
+            
+            num_pedido = int(input("\nNúmero do pedido (0 para sair): "))
+        except ValueError:
+            print("Entrada inválida. Tente novamente.")
+            continue
+            
+    
+        if num_pedido == 0:
+            break
+            
+        
+        
+        try:
+            
+            preco_unitario = float(input("Preço unitário: "))
+            quantidade = int(input("Quantidade: "))
+        except ValueError:
+            print("Valores inválidos para preço ou quantidade. Pedido ignorado.")
+            continue
+        
+        
+        valor_pedido = preco_unitario * quantidade
+        
+        
+        total_compra_geral += valor_pedido
+        
+        print(f"Pedido {num_pedido} - Valor Total: R$ {valor_pedido:.2f}")
+            
+    print("\n Resultado Final")
+    print(f"O valor total de todas as compras foi: R$ {total_compra_geral:.2f}")
+
+
+    
 #18. Uma pousada estipulou o preço para a diária em R$30,00 e mais uma taxa de
 #serviços diários de:
 #• R$15,00, se o número de dias for menor que 10;
@@ -367,6 +469,55 @@ def q14():
 #cliente e ao final o total faturado pela pousada.
 #O programa deverá ler novos clientes até que o usuário digite 0 (zero) como
 #número da conta.
+def q18():
+    print("--- Cálculo do Faturamento da Pousada ---")
+    print("Digite 0 como número da conta para encerrar.")
+    
+    total_faturado_pousada = 0.0
+    
+    while True:
+        try:
+            
+            num_conta = int(input("\nNúmero da Conta (0 para sair): "))
+        except ValueError:
+            print("Entrada inválida. Tente novamente.")
+            continue
+            
+        
+        if num_conta == 0:
+            break
+            
+        
+        nome = input("Nome do Cliente: ")
+        try:
+            num_dias = int(input("Número de dias hospedados: "))
+        except ValueError:
+            print("Entrada inválida para número de dias. Cliente ignorado.")
+            continue
+
+        
+        if num_dias < 10:
+            taxa_servico = 15.00
+        else:
+            taxa_servico = 8.00
+            
+        
+        custo_diarias = num_dias * 30.00
+        custo_servicos = num_dias * taxa_servico
+        conta_cliente = custo_diarias + custo_servicos
+        
+        
+        total_faturado_pousada += conta_cliente
+        
+        print(f"\nResumo da Conta {num_conta} - {nome}:")
+        print(f"Total de Diárias ({num_dias} dias): R$ {custo_diarias:.2f}")
+        print(f"Total de Serviços: R$ {custo_servicos:.2f}")
+        print(f"CONTA FINAL: R$ {conta_cliente:.2f}")
+            
+    print("\n--- Faturamento Total da Pousada ---")
+    print(f"O total faturado pela pousada foi: R$ {total_faturado_pousada:.2f}")
+
+
 
 #19. Em uma Universidade, os alunos das turmas de informática fizeram uma prova
 #de algoritmos. Cada turma possui um número de alunos. Criar um programa que
@@ -375,6 +526,59 @@ def q14():
 #• média de cada turma;
 #• percentual de reprovados.
 #Obs.: Considere aprovado com nota >= 7.0
+def q19():
+    print("--- Análise de Notas por Turma ---")
+    print("Digite 0 para o número de alunos para encerrar o programa.")
+
+    while True:
+        try:
+            num_alunos = int(input("\nDigite o número de alunos da turma (0 para sair): "))
+        except ValueError:
+            print("Entrada inválida. Digite um número inteiro.")
+            continue
+            
+        if num_alunos == 0:
+            break
+            
+        if num_alunos < 0:
+            print("O número de alunos não pode ser negativo.")
+            continue
+        
+        
+        soma_notas_turma = 0.0
+        aprovados = 0
+        
+        
+        for i in range(num_alunos):
+            print(f"--- Aluno {i+1} ---")
+            try:
+                nota = float(input("Nota do aluno (0.0 a 10.0): "))
+            except ValueError:
+                print("Nota inválida. Aluno ignorado.")
+                continue
+
+            soma_notas_turma += nota
+            
+            
+            if nota >= 7.0:
+                aprovados += 1
+                
+         
+        if num_alunos > 0:
+            media_turma = soma_notas_turma / num_alunos
+            reprovados = num_alunos - aprovados
+            
+            
+            percentual_reprovados = (reprovados / num_alunos) * 100
+            
+            print("\n--- Resultados da Turma ---")
+            print(f"Quantidade de alunos aprovados: {aprovados}")
+            print(f"Média da turma: {media_turma:.2f}")
+            print(f"Percentual de reprovados: {percentual_reprovados:.2f}%")
+        else:
+            print("Turma sem alunos. Pulando os cálculos.")
+
+
 
 #20. Uma pesquisa de opinião realizada no Rio de Janeiro, teve as seguintes perguntas:
 #• Qual o seu time de coração?
@@ -396,6 +600,88 @@ def q14():
 #• o número de pessoas de Niterói torcedoras do Fluminense
 #3.12. Exercícios da Aula 73
 #Obs.: O programa encerra quando se digita 0 para o time.
+def q20():
+    print("--- Pesquisa de Audiência e Salário ---")
+    print("Digite 0 para o time do coração para encerrar.")
+    
+    
+    total_entrevistados = 0
+    
+    
+    cont_times = [0, 0, 0, 0, 0]
+    nomes_times = ["Fluminense", "Botafogo", "Vasco", "Flamengo", "Outros"]
+    
+    
+    soma_salario_botafogo = 0.0
+    cont_botafogo = 0 
+    
+    
+    cont_rj_outros_clubes = 0
+    cont_niteroi_fluminense = 0
+
+    while True:
+        try:
+            
+            time = int(input("\nTime (1 a 5, ou 0 para sair): "))
+        except ValueError:
+            print("Entrada inválida para o time.")
+            continue
+            
+        
+        if time == 0:
+            break
+            
+        if time < 1 or time > 5:
+            print("Código de time inválido. Tente novamente.")
+            continue
+            
+        
+        try:
+            
+            moradia = int(input("Moradia (1-RJ, 2-Niterói, 3-Outros): "))
+            salario = float(input("Salário: "))
+        except ValueError:
+            print("Entrada inválida para moradia ou salário. Entrevistado ignorado.")
+            continue
+            
+        
+        total_entrevistados += 1
+        
+        
+        
+        
+        cont_times[time - 1] += 1
+        
+        
+        if time == 2:
+            soma_salario_botafogo += salario
+            cont_botafogo += 1
+            
+        
+        if moradia == 1 and time == 5:
+            cont_rj_outros_clubes += 1
+            
+        
+        if moradia == 2 and time == 1:
+            cont_niteroi_fluminense += 1
+
+    print("\n--- Resultados da Pesquisa ---")
+    
+    
+    print("Número de torcedores por clube:")
+    for i in range(len(cont_times)):
+        print(f"  {nomes_times[i]}: {cont_times[i]}")
+        
+    
+    media_botafogo = soma_salario_botafogo / cont_botafogo if cont_botafogo > 0 else 0
+    print(f"\nMédia salarial dos torcedores do Botafogo: R$ {media_botafogo:.2f}")
+    
+    
+    print(f"Pessoas moradoras do RJ, torcedores de outros clubes: {cont_rj_outros_clubes}")
+    
+    
+    print(f"Pessoas de Niterói, torcedoras do Fluminense: {cont_niteroi_fluminense}")
+
 
 #21. Em uma universidade cada aluno possui os seguintes dados:
 #• Renda pessoal;
