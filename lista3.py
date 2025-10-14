@@ -337,8 +337,18 @@ def q14():
 
 
         
+def fatorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n*fatorial(n-1)
 
 
+def q114():
+    n = 1
+    while n != 0:
+        n = int(input("Digite o número para cálcular: "))
+        print(fatorial(n))
 
 
 #15. Faça um programa que permita entrar com a idade de várias pessoas e
@@ -601,7 +611,7 @@ def q19():
 #3.12. Exercícios da Aula 73
 #Obs.: O programa encerra quando se digita 0 para o time.
 def q20():
-    print("--- Pesquisa de Audiência e Salário ---")
+    print(" Pesquisa de Audiência e Salário ")
     print("Digite 0 para o time do coração para encerrar.")
     
     
