@@ -174,9 +174,108 @@ def q12():
         print('Janeiro')
     elif mes == 2:
         print('Fevereiro')
-    # ... continua até 12
+    
     else:
         print('Mês Inválido!')
+
+
+#1. Faça um programa que leia o valor unitário de um produto,
+#   a quantidade desejada e imprima o valor total a pagar. (2,5pt)
+def q13():
+    quantidade = int(input('Digite a quantidade de produto: '))
+    valor_unitario = float(input('Digite o valor unitário do produto:'))
+
+    valortotal = (quantidade * valor_unitario)
+
+
+
+    print(f'O valor total da compra é: {valortotal}')
+
+
+
+#2. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota
+#   da prova 2 de um aluno. O programa deve imprimir o nome, a nota da prova 1,
+#   a nota da prova 2, a média das notas e uma das mensagens: "Aprovado",
+#   "Reprovado" ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para
+#   reprovação e as demais em prova final). (2,5pt)
+def q14():
+    nome = str(input('Digite o nome do aluno: '))
+    n1 = float(input('Digite a primeira nota do aluno: '))
+    n2 = float(input('Digite a segunda nota do aluno: '))
+
+
+    media = (n1+n2)/2
+
+
+
+    print(f'O valor da prova n1 é: {n1}')
+    print(f'O valor da prova n2 é: {n2}')
+    print(f'A média é: {media}')
+
+
+    if media >= 7:
+        print(f'Aluno {nome} foi aprovado.')
+
+    elif media < 3:
+        print(f'Aluno {nome} foi reprovado.')
+    else:
+        print(f'O aluno {nome} ficou de prova final.')
+
+
+
+
+#3. Faça um programa que apresente um menu com 4 opções:
+#   [1] - Cadastrar
+#   [2] - Excluir
+#   [3] - Pesquisar
+#   [0] - Sair
+#   O usuário deve escolher uma opção e o programa deve imprimir uma mensagem 
+#   ao entrar em cada opção do menu. O programa só deve encerrar quando a opção
+#   escolhida for zero (0). (2,5pt)
+def q15():
+
+    codigo = int(input('Digite a opção desejada sendo: [1] - Cadastrar, [2] - Excluir, [3] - Pesquisar, [0] - Sair: '))
+
+
+    if codigo == 1:
+        print(f'Seja bem vindo ao menu de Cadastro.')
+
+    elif codigo == 2:
+        print(f'Seja bem vindo ao menu Excluir.')
+    
+    elif codigo == 3:
+        print(f'Seja bem vindo ao menu de Pesquisar.')
+
+    elif codigo == 0:
+        print(f'Muito obrigado pelo acesso volte sempre!!!.')
+
+    else:
+        print(f'Opção digitada errada tente novamente!!!')
+
+
+#4. Faça um programa que calcule o retorno de um investimento. (2,5pt)
+#   O programa deve solicitar do usuário o:
+#   - valor que será investido;
+#   - prazo do investimento (meses);
+#   - juros mensal (juros composto).
+def q16():
+
+    valor_inicial = float(input('Digite o valor investido (principal): R$ '))
+    taxa_percentual = float(input('Digite o juros mensal (ex: 1.5 para 1.5%): '))
+    tempo_meses = float (input('Digite o prazo para investimentos (em meses): '))
+
+
+    taxa_decimal = taxa_percentual / 100
+
+    montante_final = valor_inicial * (1 + taxa_decimal) ** tempo_meses
+
+    juros_ganhos = montante_final - valor_inicial
+
+    print('Resultado do investimento')
+    print(f'Valor Inicial Investido : R$ {valor_inicial:.2f}')
+    print(f'Prazo do Investimento: {tempo_meses:.0f} meses')
+    print(f'Juros Ganhos (Composto): R$ {juros_ganhos:.2f}')
+    print(f'O valor total do Retorno (montante) é: {montante_final:.2f}')
 
 
 
